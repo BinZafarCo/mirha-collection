@@ -3,50 +3,70 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mirha Collection - Risalpur</title>
+<title>Mirha Collection - Full Secure</title>
 <style>
-body{font-family:sans-serif;margin:0;background:#fff5f7;color:#333;text-align:center}
-header{background:#c2185b;color:white;padding:25px 10px}
-header h1{margin:0;font-size:32px}
-header p{margin:5px 0}
-.btn{display:inline-block;background:#25D366;color:white;padding:12px 22px;border-radius:25px;text-decoration:none;font-weight:bold;margin:10px}
-.box{background:white;margin:15px;padding:15px;border-radius:15px;box-shadow:0 2px 10px #ddd}
-.box img{width:100%;border-radius:12px}
-.price{color:#c2185b;font-weight:bold;font-size:20px}
-footer{background:#333;color:white;padding:15px;font-size:13px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#fff;color:#222}
+header{height:68px;background:#111;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 14px;position:sticky;top:0;z-index:100}
+header b{font-size:20px} header b span{color:#f5c518}
+header a{color:#fff;text-decoration:none;font-size:13px;margin-left:10px}
+.banner{height:140px;background:linear-gradient(90deg,#111,#444);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
+.banner h1{font-size:22px} .banner p{font-size:13px;opacity:.9}
+.banner a{background:#25D366;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:800;font-size:13px;margin-top:8px;display:inline-block}
+h2{padding:14px 14px 6px;font-size:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px 14px}
+.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff}
+.card img{width:100%;height:180px;object-fit:cover;display:block;background:#eee}
+.card div{padding:10px} .card b{font-size:14px} .card p{font-size:12px;color:#666;margin:4px 0}
+.price{color:#111;font-weight:800} .btn{display:block;background:#111;color:#fff;text-align:center;padding:9px;border-radius:8px;text-decoration:none;font-size:13px;margin-top:8px}
+.cat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 14px 14px}
+.cat div{border-radius:12px;overflow:hidden;position:relative;height:90px;background:#eee}
+.cat img{width:100%;height:100%;object-fit:cover}
+.cat span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:6px;text-align:center}
+.social{display:flex;gap:10px;padding:0 14px 14px}
+.social a{flex:1;text-align:center;padding:10px;border-radius:10px;color:#fff;text-decoration:none;font-size:13px;font-weight:700}
+.fb{background:#1877F2} .ig{background:#E1306C} .yt{background:#FF0000}
+.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:13px;border-radius:30px;font-weight:800;text-decoration:none;margin:0 14px 14px}
+.float-wa{position:fixed;right:14px;bottom:80px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:999;text-decoration:none}
+.chatbox{margin:0 14px 20px;border:1px solid #eee;border-radius:14px;padding:12px}
+.chatbox h3{font-size:15px;margin-bottom:8px}
+#chat{height:150px;overflow-y:auto;background:#f9f9f9;border-radius:10px;padding:10px;font-size:13px;margin-bottom:10px}
+#chat div{margin-bottom:8px;background:#fff;padding:8px 10px;border-radius:10px;border:1px solid #eee}
+.chatrow{display:flex;gap:8px} .chatrow input{flex:1;padding:10px;border-radius:20px;border:1px solid #ddd} .chatrow button{padding:10px 14px;border:none;background:#25D366;color:#fff;border-radius:20px;font-weight:800}
+footer{background:#111;color:#fff;text-align:center;padding:14px;font-size:12px}
 </style>
 </head>
 <body>
-<header>
-<h1>🌸 Mirha Collection 🌸</h1>
-<p>Risalpur | Khyber Pakhtunkhwa</p>
-<p>Beautiful Dresses - Best Price - Cash on Delivery</p>
-<a class="btn" href="https://wa.me/923000000000">WhatsApp pe Order Karo</a>
-</header>
-
-<div class="box">
-<h2>👗 Lawn Suit - Pink</h2>
-<p>Soft Lawn - Summer Collection</p>
-<p class="price">Rs. 2,500</p>
-<a class="btn" href="https://wa.me/923000000000?text=Salam! Mujhe Pink Lawn Suit chahiye">Order Karo</a>
+<header><b>Mirha <span>Collection</span> 🌙</b><div><a href="#products">Shop</a><a href="#cat">Category</a><a href="#support">Support</a></div></header>
+<div class="banner"><h1>Mirha Collection ❤️</h1><p>Original Lawn • Cotton • Khaddar - All Pakistan Delivery</p><a href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Order%20Chahiye">💬 Chat on WhatsApp • Order Help</a></div>
+<h2 id="products">🔥 First Page - 4 Products</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Women Lawn - Pink</b><p>Original Lawn - S/M/L/XL</p><div class="price">Rs 4,999</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Women%20Lawn%20Pink%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Men Lawn - White</b><p>Original Lawn - S/M/L/XL</p><div class="price">Rs 2,999</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Men%20Lawn%20White%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1622122201714-77da0ca8e5d2?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Women Cotton - Blue</b><p>Original Cotton - S/M/L/XL</p><div class="price">Rs 4,499</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Women%20Cotton%20Blue%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Men Cotton - Black</b><p>Original Cotton - S/M/L/XL</p><div class="price">Rs 3,499</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Men%20Cotton%20Black%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
 </div>
-
-<div class="box">
-<h2>👗 Embroidered Suit - Blue</h2>
-<p>Party Wear - Fancy Embroidery</p>
-<p class="price">Rs. 3,500</p>
-<a class="btn" href="https://wa.me/923000000000?text=Salam! Mujhe Blue Suit chahiye">Order Karo</a>
+<h2 id="cat">📂 Category - End par Pic ke Sath</h2>
+<div class="cat">
+<div><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Lawn'"><span>Men Lawn</span></div>
+<div><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Lawn'"><span>Women Lawn</span></div>
+<div><img src="https://images.unsplash.com/photo-1622122201714-77da0ca8e5d2?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Cotton'"><span>Men Cotton</span></div>
+<div><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Cotton'"><span>Women Cotton</span></div>
+<div><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Khaddar'"><span>Men Khaddar</span></div>
+<div><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Khaddar'"><span>Women Khaddar</span></div>
 </div>
-
-<div class="box">
-<h2>👗 Cotton Suit - Green</h2>
-<p>Daily Wear - Comfortable</p>
-<p class="price">Rs. 1,800</p>
-<a class="btn" href="https://wa.me/923000000000?text=Salam! Mujhe Green Suit chahiye">Order Karo</a>
-</div>
-
-<footer>
-<p>Mirha Collection - Risalpur<br>Delivery All Pakistan - Cash on Delivery Available<br>WhatsApp: 0300-0000000</p>
-</footer>
+<h2>Follow Us</h2>
+<div class="social"><a class="fb" href="#" onclick="alert('Facebook Page Jaldi Aa Raha Hai');return false;">Facebook</a><a class="ig" href="#" onclick="alert('Instagram Page Jaldi Aa Raha Hai');return false;">Instagram</a><a class="yt" href="#" onclick="alert('YouTube Channel Jaldi Aa Raha Hai');return false;">YouTube</a></div>
+<a class="wa-btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Order%20Chahiye" target="_blank">💬 Chat on WhatsApp • Order Help</a>
+<div class="chatbox" id="support"><h3>💬 Support - Welcome + Order + Track - Baaki Human ko Refer</h3><div id="chat"><div><b>Mirha Support:</b> Salam! Mirha Collection me Khush Amdeed ❤️ Batain: 1. Order Karna hai 2. Order Track Karna hai</div></div><div class="chatrow"><input id="msg" placeholder="Likhen: 1 ya 2 ya Salam..."><button onclick="sendMsg()">Send</button></div></div>
+<a class="float-wa" href="https://wa.me/923001234567" target="_blank">💬</a>
+<footer>Mirha Collection © 2026 - Secure - All Pakistan Delivery - COD Available<br>Payment Sirf Website / COD</footer>
+<script>
+const SETTINGS={whatsapp_number:"923001234567",admin_whatsapp:"https://wa.me/923001234567"};
+const BLOCKED=["hack","password","otp","admin","manager","supervisor","worker","database","supplier","profit","fake"];
+function aiReply(msg){let low=msg.toLowerCase().trim();for(let w of BLOCKED){if(low.includes(w)){return "Maaf Karen - Human Admin se Baat Karen: <a href='"+SETTINGS.admin_whatsapp+"' target='_blank'>"+SETTINGS.admin_whatsapp+"</a>";}}if(low.includes("salam")||low.includes("hi")||low.includes("hello")){return "Salam! Mirha Collection me Khush Amdeed ❤️ Batain: 1. Order Karna hai 2. Order Track Karna hai";}if(low==="1"||low.includes("order karna")){return "Order ke liye: 1. Product ka Naam 2. Size S/M/L/XL 3. Naam + Address + City Bhejen";}if(low==="2"||low.includes("track")){return "Order Track ke liye Apna Order ID Likhen - Example: MI#12345678";}return "Samajh Nahi Aaya - Human Admin se Baat Karen: <a href='"+SETTINGS.admin_whatsapp+"' target='_blank'>"+SETTINGS.admin_whatsapp+"</a>";}
+function sendMsg(){let inp=document.getElementById("msg");let txt=inp.value.trim();if(!txt)return;let safe=txt.replace(/</g,"&lt;").replace(/>/g,"&gt;");let chat=document.getElementById("chat");chat.innerHTML+="<div><b>Aap:</b> "+safe+"</div>";chat.innerHTML+="<div><b>Mirha Support:</b> "+aiReply(txt)+"</div>";chat.scrollTop=chat.scrollHeight;inp.value="";}
+document.getElementById("msg").addEventListener("keypress",function(e){if(e.key==="Enter")sendMsg();});
+</script>
 </body>
 </html>
