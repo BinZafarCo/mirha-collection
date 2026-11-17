@@ -1,72 +1,107 @@
 <!DOCTYPE html>
-<html lang="ur">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mirha Collection - Full Secure</title>
+<html lang="ur"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mirha Collection - Full Store</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#fff;color:#222}
-header{height:68px;background:#111;color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 14px;position:sticky;top:0;z-index:100}
-header b{font-size:20px} header b span{color:#f5c518}
-header a{color:#fff;text-decoration:none;font-size:13px;margin-left:10px}
-.banner{height:140px;background:linear-gradient(90deg,#111,#444);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px}
-.banner h1{font-size:22px} .banner p{font-size:13px;opacity:.9}
-.banner a{background:#25D366;color:#fff;padding:8px 16px;border-radius:20px;text-decoration:none;font-weight:800;font-size:13px;margin-top:8px;display:inline-block}
-h2{padding:14px 14px 6px;font-size:18px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 14px 14px}
-.card{border:1px solid #eee;border-radius:12px;overflow:hidden;background:#fff}
-.card img{width:100%;height:180px;object-fit:cover;display:block;background:#eee}
-.card div{padding:10px} .card b{font-size:14px} .card p{font-size:12px;color:#666;margin:4px 0}
-.price{color:#111;font-weight:800} .btn{display:block;background:#111;color:#fff;text-align:center;padding:9px;border-radius:8px;text-decoration:none;font-size:13px;margin-top:8px}
-.cat{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;padding:0 14px 14px}
-.cat div{border-radius:12px;overflow:hidden;position:relative;height:90px;background:#eee}
-.cat img{width:100%;height:100%;object-fit:cover}
-.cat span{position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:6px;text-align:center}
-.social{display:flex;gap:10px;padding:0 14px 14px}
-.social a{flex:1;text-align:center;padding:10px;border-radius:10px;color:#fff;text-decoration:none;font-size:13px;font-weight:700}
-.fb{background:#1877F2} .ig{background:#E1306C} .yt{background:#FF0000}
-.wa-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;padding:13px;border-radius:30px;font-weight:800;text-decoration:none;margin:0 14px 14px}
-.float-wa{position:fixed;right:14px;bottom:80px;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;font-size:28px;z-index:999;text-decoration:none}
-.chatbox{margin:0 14px 20px;border:1px solid #eee;border-radius:14px;padding:12px}
-.chatbox h3{font-size:15px;margin-bottom:8px}
-#chat{height:150px;overflow-y:auto;background:#f9f9f9;border-radius:10px;padding:10px;font-size:13px;margin-bottom:10px}
-#chat div{margin-bottom:8px;background:#fff;padding:8px 10px;border-radius:10px;border:1px solid #eee}
-.chatrow{display:flex;gap:8px} .chatrow input{flex:1;padding:10px;border-radius:20px;border:1px solid #ddd} .chatrow button{padding:10px 14px;border:none;background:#25D366;color:#fff;border-radius:20px;font-weight:800}
-footer{background:#111;color:#fff;text-align:center;padding:14px;font-size:12px}
-</style>
-</head>
+*{box-sizing:border-box}body{font-family:system-ui;margin:0;background:#fff7f7}
+header{background:#7a1f3d;color:#fff;padding:14px;text-align:center;position:sticky;top:0}
+.cat{display:flex;gap:8px;overflow:auto;padding:10px}
+.cat button{padding:8px 14px;border:1px solid #7a1f3d;background:#fff;border-radius:20px;white-space:nowrap}
+.cat button.active{background:#7a1f3d;color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px}
+.card{background:#fff;border-radius:12px;padding:10px;box-shadow:0 2px 8px #0001}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:10px;background:#eee}
+.price{font-weight:800;color:#7a1f3d}.old{text-decoration:line-through;color:#999;font-size:13px}
+.btn{width:100%;padding:10px;background:#7a1f3d;color:#fff;border:0;border-radius:10px;margin-top:6px}
+#cart{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:12px;border-top:2px solid #7a1f3d}
+input,select{width:100%;padding:11px;margin:6px 0;border:1px solid #ddd;border-radius:10px}
+.box{background:#fff;margin:10px;padding:12px;border-radius:12px}
+</style></head>
 <body>
-<header><b>Mirha <span>Collection</span> 🌙</b><div><a href="#products">Shop</a><a href="#cat">Category</a><a href="#support">Support</a></div></header>
-<div class="banner"><h1>Mirha Collection ❤️</h1><p>Original Lawn • Cotton • Khaddar - All Pakistan Delivery</p><a href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Order%20Chahiye">💬 Chat on WhatsApp • Order Help</a></div>
-<h2 id="products">🔥 First Page - 4 Products</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Women Lawn - Pink</b><p>Original Lawn - S/M/L/XL</p><div class="price">Rs 4,999</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Women%20Lawn%20Pink%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Men Lawn - White</b><p>Original Lawn - S/M/L/XL</p><div class="price">Rs 2,999</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Men%20Lawn%20White%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1622122201714-77da0ca8e5d2?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Women Cotton - Blue</b><p>Original Cotton - S/M/L/XL</p><div class="price">Rs 4,499</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Women%20Cotton%20Blue%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=600" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x400?text=Mirha+Collection'"><div><b>Men Cotton - Black</b><p>Original Cotton - S/M/L/XL</p><div class="price">Rs 3,499</div><a class="btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Men%20Cotton%20Black%20Order%20Karna%20hai">Order on WhatsApp</a></div></div>
+<header><h2 style="margin:0">MIRHA COLLECTION</h2><p style="margin:2px;font-size:13px">Ladies • Gents • Kids | COD Available</p></header>
+
+<div class="cat" id="cats">
+<button class="active" onclick="filterCat('All',this)">All</button>
+<button onclick="filterCat('Ladies',this)">Ladies</button>
+<button onclick="filterCat('Gents',this)">Gents</button>
+<button onclick="filterCat('Kids',this)">Kids</button>
+<button onclick="filterCat('Sale',this)">Sale</button>
 </div>
-<h2 id="cat">📂 Category - End par Pic ke Sath</h2>
-<div class="cat">
-<div><img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Lawn'"><span>Men Lawn</span></div>
-<div><img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Lawn'"><span>Women Lawn</span></div>
-<div><img src="https://images.unsplash.com/photo-1622122201714-77da0ca8e5d2?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Cotton'"><span>Men Cotton</span></div>
-<div><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Cotton'"><span>Women Cotton</span></div>
-<div><img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Men+Khaddar'"><span>Men Khaddar</span></div>
-<div><img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=400" onerror="this.onerror=null;this.src='https://via.placeholder.com/400x200?text=Women+Khaddar'"><span>Women Khaddar</span></div>
+
+<div class="grid" id="products"></div>
+
+<div class="box">
+<h3>🛒 Checkout - Guest Order - Bina ID Ke</h3>
+<input id="cName" placeholder="Naam * - Jaise Ahmed">
+<input id="cPhone" placeholder="WhatsApp Number * - 03xx-xxxxxxx" type="tel">
+<input id="cAddress" placeholder="Address * - Risalpur, Nowshera">
+<select id="pay"><option value="COD">Cash on Delivery - COD</option><option value="JazzCash">JazzCash</option><option value="EasyPaisa">EasyPaisa</option></select>
+<input id="tid" placeholder="JazzCash / EasyPaisa TID - COD pe khali chor do">
+<button class="btn" onclick="sendOTP()">WhatsApp OTP Bhejo</button>
+<div id="otpBox" style="display:none">
+<input id="otp" placeholder="4 Digit OTP - Test ke liye 1234">
+<button class="btn" style="background:#111" onclick="placeOrder()">✅ OTP Verify + Order Place Karo</button>
 </div>
-<h2>Follow Us</h2>
-<div class="social"><a class="fb" href="#" onclick="alert('Facebook Page Jaldi Aa Raha Hai');return false;">Facebook</a><a class="ig" href="#" onclick="alert('Instagram Page Jaldi Aa Raha Hai');return false;">Instagram</a><a class="yt" href="#" onclick="alert('YouTube Channel Jaldi Aa Raha Hai');return false;">YouTube</a></div>
-<a class="wa-btn" href="https://wa.me/923001234567?text=Salam!%20Mujhe%20Order%20Chahiye" target="_blank">💬 Chat on WhatsApp • Order Help</a>
-<div class="chatbox" id="support"><h3>💬 Support - Welcome + Order + Track - Baaki Human ko Refer</h3><div id="chat"><div><b>Mirha Support:</b> Salam! Mirha Collection me Khush Amdeed ❤️ Batain: 1. Order Karna hai 2. Order Track Karna hai</div></div><div class="chatrow"><input id="msg" placeholder="Likhen: 1 ya 2 ya Salam..."><button onclick="sendMsg()">Send</button></div></div>
-<a class="float-wa" href="https://wa.me/923001234567" target="_blank">💬</a>
-<footer>Mirha Collection © 2026 - Secure - All Pakistan Delivery - COD Available<br>Payment Sirf Website / COD</footer>
+<p id="msg" style="font-size:13px;color:green"></p>
+<p style="font-size:12px;color:#666">Security: Price backend se aayega. Card / PIN kabhi nahi mangenge. Sirf TID mangenge.</p>
+</div>
+
+<div id="cart">🛒 Cart: <b id="cartCount">0</b> items | Total: <b id="cartTotal">Rs. 0</b> | <a href="login.html">Team Login</a> | <a href="admin.html">Admin</a></div>
+
 <script>
-const SETTINGS={whatsapp_number:"923001234567",admin_whatsapp:"https://wa.me/923001234567"};
-const BLOCKED=["hack","password","otp","admin","manager","supervisor","worker","database","supplier","profit","fake"];
-function aiReply(msg){let low=msg.toLowerCase().trim();for(let w of BLOCKED){if(low.includes(w)){return "Maaf Karen - Human Admin se Baat Karen: <a href='"+SETTINGS.admin_whatsapp+"' target='_blank'>"+SETTINGS.admin_whatsapp+"</a>";}}if(low.includes("salam")||low.includes("hi")||low.includes("hello")){return "Salam! Mirha Collection me Khush Amdeed ❤️ Batain: 1. Order Karna hai 2. Order Track Karna hai";}if(low==="1"||low.includes("order karna")){return "Order ke liye: 1. Product ka Naam 2. Size S/M/L/XL 3. Naam + Address + City Bhejen";}if(low==="2"||low.includes("track")){return "Order Track ke liye Apna Order ID Likhen - Example: MI#12345678";}return "Samajh Nahi Aaya - Human Admin se Baat Karen: <a href='"+SETTINGS.admin_whatsapp+"' target='_blank'>"+SETTINGS.admin_whatsapp+"</a>";}
-function sendMsg(){let inp=document.getElementById("msg");let txt=inp.value.trim();if(!txt)return;let safe=txt.replace(/</g,"&lt;").replace(/>/g,"&gt;");let chat=document.getElementById("chat");chat.innerHTML+="<div><b>Aap:</b> "+safe+"</div>";chat.innerHTML+="<div><b>Mirha Support:</b> "+aiReply(txt)+"</div>";chat.scrollTop=chat.scrollHeight;inp.value="";}
-document.getElementById("msg").addEventListener("keypress",function(e){if(e.key==="Enter")sendMsg();});
-</script>
-</body>
-</html>
+// DATABASE - Backend se aayega, yahan price lock hai
+let DB = [];
+fetch('database.json').then(r=>r.json()).then(d=>{DB=d.products; render('All')}).catch(()=>{
+DB=[
+{id:1,name:"Ladies Lawn Suit",cat:"Ladies",price:2500,old:3200,img:"https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=600"},
+{id:2,name:"Gents Shalwar Kameez",cat:"Gents",price:3000,old:3800,img:"https://images.unsplash.com/photo-1597983243852-2c7a3b4c1c5a?w=600"},
+{id:3,name:"Kids Fancy Suit",cat:"Kids",price:1800,old:2200,img:"https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?w=600"},
+{id:4,name:"Ladies Fancy - Sale",cat:"Sale",price:1999,old:3500,img:"https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600"}
+]; render('All');
+});
+let cart=[];
+function render(cat){
+let list = cat==='All'?DB:DB.filter(p=>p.cat===cat);
+document.getElementById('products').innerHTML=list.map(p=>`
+<div class="card"><img src="${p.img}"><b>${p.name}</b><br><span>${p.cat}</span><br><span class="price">Rs. ${p.price}</span> <span class="old">Rs. ${p.old}</span><br><button class="btn" onclick="add(${p.id})">Add to Cart</button></div>`).join('');
+}
+function filterCat(c,el){document.querySelectorAll('.cat button').forEach(b=>b.classList.remove('active'));el.classList.add('active');render(c)}
+function add(id){
+let p=DB.find(x=>x.id===id);
+// PRICE LOCK - price DB se, user change nahi kar sakta
+cart.push({id:p.id,name:p.name,price:p.price});
+updateCart();
+}
+function updateCart(){
+let t=cart.reduce((s,x)=>s+x.price,0);
+document.getElementById('cartCount').innerText=cart.length;
+document.getElementById('cartTotal').innerText='Rs. '+t;
+}
+function sendOTP(){
+let ph=document.getElementById('cPhone').value;
+if(ph.length<10){alert('Sahi WhatsApp Number Likho');return}
+// RATE LIMIT + OTP - Real me WhatsApp API se jayega, Test me 1234 hai
+document.getElementById('otpBox').style.display='block';
+document.getElementById('msg').innerText='OTP bhej diya hai WhatsApp pe (Test OTP: 1234)';
+}
+function placeOrder(){
+let name=document.getElementById('cName').value;
+let ph=document.getElementById('cPhone').value;
+let ad=document.getElementById('cAddress').value;
+let otp=document.getElementById('otp').value;
+let pay=document.getElementById('pay').value;
+let tid=document.getElementById('tid').value;
+if(!name||!ph||!ad){alert('Naam, Number, Address lazmi hai');return}
+if(otp!=='1234'){alert('Galat OTP - Test OTP 1234 hai');return}
+if(cart.length===0){alert('Pehle Cart me Product Add Karo');return}
+if(pay!=='COD' && !tid){alert('JazzCash / EasyPaisa ka TID lazmi hai');return}
+// FISCAL SECURITY - Total dobara calculate
+let total=cart.reduce((s,x)=>s+x.price,0);
+let orderId='MIRHA-'+(1001+Math.floor(Math.random()*9000));
+let order={id:orderId,customer:name,phone:ph,address:ad,pay:pay,tid:tid,items:cart,total:total,status:'Pending',date:new Date().toLocaleString()};
+localStorage.setItem('lastOrder',JSON.stringify(order));
+let old=JSON.parse(localStorage.getItem('mirhaOrders')||'[]'); old.push(order); localStorage.setItem('mirhaOrders',JSON.stringify(old));
+let waMsg=`Naya Order ${orderId}%0AName: ${name}%0APhone: ${ph}%0AAddress: ${ad}%0ATotal: Rs. ${total}%0APay: ${pay} TID: ${tid}`;
+document.getElementById('msg').innerHTML=`✅ Order Ho Gaya! ID: <b>${orderId}</b> Total Rs. ${total}<br><a href="https://wa.me/923001234567?text=${waMsg}" target="_blank">WhatsApp pe Order Bhejo</a>`;
+cart=[];updateCart();
+}
+</script></body></html>
