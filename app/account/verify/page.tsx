@@ -1,0 +1,5 @@
+import { verifyEmailOtp } from "../actions";
+export default async function VerifyPage({searchParams}:{searchParams:Promise<{email?:string,error?:string}>}) {
+ const params=await searchParams; const email=params.email??"";
+ return <main className="admin-wrap"><div className="admin-card" style={{maxWidth:520}}><div className="eyebrow">Email verification</div><h1 style={{fontFamily:"Playfair Display",fontWeight:500}}>Enter your code</h1><p className="muted">A six-digit code was requested for {email||"your email address"}.</p>{params.error&&<p className="status">The code could not be verified. Check it and try again.</p>}<form action={verifyEmailOtp}><input type="hidden" name="email" value={email}/><label htmlFor="token">6-digit verification code</label><input className="field" id="token" name="token" inputMode="numeric" pattern="[0-9]{6}" maxLength={6} required placeholder="000000"/><button className="btn" type="submit">Verify email</button></form><a className="muted" href="/account">Use another email</a></div></main>;
+}
