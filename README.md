@@ -27,3 +27,10 @@ Next.js 15 storefront foundation for Cloudflare Workers via OpenNext and Supabas
 - Add automated end-to-end tests, rate limiting, audit logs, backups and security review.
 
 Never commit service-role keys, provider tokens, or credentials. Do not accept live orders or payments until the required workflows are implemented and tested.
+
+## Cloudflare deployment (Workers)
+- Build command: `npx opennextjs-cloudflare build`
+- Deploy command: `npx wrangler deploy`
+- Variables: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY` (optional: `NEXT_PUBLIC_WHATSAPP_NUMBER`, `NEXT_PUBLIC_SITE_URL`)
+- `package.json` `build` must stay `next build` (OpenNext calls it internally; pointing it at OpenNext creates an infinite loop).
+- Visitor tracking uses the D1 binding `DB` (see `wrangler.jsonc`); tables: `visitors`, `visitor_events`.
